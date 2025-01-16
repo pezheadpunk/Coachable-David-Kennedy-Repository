@@ -1,3 +1,5 @@
+from typing import List
+
 '''49. Group Anagrams'''
 class Solution:
     '''Solution Class'''
