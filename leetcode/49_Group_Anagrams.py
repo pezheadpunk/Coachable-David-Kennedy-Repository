@@ -1,4 +1,5 @@
 '''49. Group Anagrams'''
+from collections import defaultdict
 from typing import List
 
 class Solution:
@@ -8,11 +9,8 @@ class Solution:
         tuples as keys and then adds to the value list if a
         word when sorted matches a key. Then returns the value
         lists as a list.'''
-        anagram_dict = {}
+        anagram_dict = defaultdict(list)
         for word in strs:
-            key = list(word)
-            key.sort()
-            if tuple(key) not in anagram_dict:
-                anagram_dict[tuple(key)] = []
-            anagram_dict[tuple(key)].append(word)
+            key = tuple(sorted(word))
+            anagram_dict[key].append(word)
         return list(anagram_dict.values())
