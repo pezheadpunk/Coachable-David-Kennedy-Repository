@@ -1,3 +1,5 @@
+from typing import List
+
 '''217. Contains Duplicate'''
 class Solution:
     '''Solution Class'''
