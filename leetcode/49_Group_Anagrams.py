@@ -1,6 +1,6 @@
+'''49. Group Anagrams'''
 from typing import List
 
-'''49. Group Anagrams'''
 class Solution:
     '''Solution Class'''
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
