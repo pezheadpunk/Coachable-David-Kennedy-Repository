@@ -1,8 +1,8 @@
+'''347. Top K Frequent Elements'''
 import heapq
 import random
 from typing import List
 
-'''347. Top K Frequent Elements'''
 class Solution:
     '''Solution Class'''
     def topKFrequent_heapq(self, nums: List[int], k: int) -> List[int]:
@@ -53,7 +53,7 @@ class Solution:
             p = partition(l, r, p)
             if p < k:
                 return select(p + 1, r, k)
-            elif p > k:
+            if p > k:
                 return select(l, p - 1, k)
             else:
                 return p
