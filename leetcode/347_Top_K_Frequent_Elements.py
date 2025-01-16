@@ -23,8 +23,6 @@ class Solution:
             top_k.append(num[1])
         return top_k
 
-class Solution:
-    '''Solution Class'''
     def topKFrequent_quickselect(self, nums: List[int], k: int) -> List[int]:
         '''Creates a dictionary with each unique number being keys and the
         number of occurences being the values and convert that dictionary
@@ -62,4 +60,3 @@ class Solution:
 
         top_k = [num[0] for num in nums_dict[select(0, len(nums_dict) - 1, len(nums_dict) - k):]]
         return top_k
-        
