@@ -1,5 +1,6 @@
 import heapq
 import random
+from typing import List
 
 '''347. Top K Frequent Elements'''
 class Solution:
@@ -15,7 +16,7 @@ class Solution:
                 nums_dict[num] = 0
             nums_dict[num] += 1
         nums_data = [(val, key) for key, val in nums_dict.items()]
-        heapq.heapify(nums_list)
+        heapq.heapify(nums_data)
         top_nums= heapq.nlargest(k, nums_data)
         top_k = []
         for num in top_nums:
