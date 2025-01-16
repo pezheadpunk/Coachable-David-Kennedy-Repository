@@ -55,8 +55,7 @@ class Solution:
                 return select(p + 1, r, k)
             if p > k:
                 return select(l, p - 1, k)
-            else:
-                return p
+            return p
 
         top_k = [num[0] for num in nums_dict[select(0, len(nums_dict) - 1, len(nums_dict) - k):]]
         return top_k
