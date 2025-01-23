@@ -24,6 +24,5 @@ class Solution:
                 while next_num in nums_set:
                     next_num += 1
                     count += 1
-                if count > longest:
-                    longest = count
+                longest = max(longest, count)
         return longest
