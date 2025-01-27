@@ -11,9 +11,9 @@ class Solution:
         after the current element and another on the right side from the end of
         the list. When 3sums are found they are added to the result list.
         Repeats of numbers are skipped to avoid 3sums with the same values.
-        runtime: O(n^2) because of the sorting (O(nlog(n))) and the iterating
+        Runtime: O(n^2) because of the sorting (O(nlog(n))) and the iterating
         over the list with pointers O(n)
-        space = O(n) - the copy of the list sorted
+        Space: O(n) - the copy of the list sorted
         '''
         result = []
         nums_sorted = sorted(nums)
