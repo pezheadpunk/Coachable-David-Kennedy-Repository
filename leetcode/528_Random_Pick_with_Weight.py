@@ -4,7 +4,6 @@ import random
 
 class Solution:
     '''Solution Class'''
-    
     def __init__(self, w: List[int]):
         '''
         Initializes the object and stores the values of the total of
