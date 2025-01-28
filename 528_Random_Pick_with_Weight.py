@@ -1,5 +1,6 @@
 '''528. Random Pick with Weight'''
 from typing import List
+import random
 
 class Solution:
     '''Solution Class'''
