@@ -18,10 +18,10 @@ class Solution:
         stack = []
         prev_sign = "+"
         value = 0
-        for i in range(len(s)):
-            if s[i].isdigit():
-                value = value * 10 + int(s[i])
-            if s[i] in "+-*/" or i == len(s)-1:
+        for i, val in enumerate(s):
+            if val.isdigit():
+                value = value * 10 + int(val)
+            if val in "+-*/" or i == len(s)-1:
                 if prev_sign == "+":
                     stack.append(value)
                 elif prev_sign == "-":
@@ -31,7 +31,7 @@ class Solution:
                 elif prev_sign == "/":
                     stack.append(int(stack.pop() / value))
                 value = 0
-                prev_sign = s[i]
+                prev_sign = val
         result = 0
         for val in stack:
             result += val
