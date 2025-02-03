@@ -19,7 +19,7 @@ class LRUCache:
         self.capacity = capacity
         self.cache = {}
         self.lru = deque()
-        
+
     def get(self, key: int) -> int:
         '''
         If key is in cache returns the key's value if not returns -1.
@@ -40,4 +40,3 @@ class LRUCache:
                 del self.cache[del_key]
             self.lru.append(key)
         self.cache[key] = value
-        
