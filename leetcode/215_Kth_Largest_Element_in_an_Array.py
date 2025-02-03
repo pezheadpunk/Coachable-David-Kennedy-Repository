@@ -2,7 +2,6 @@
 from typing import List
 import random
 
-
 class Solution:
     '''Solution Class'''
     def findKthLargest(self, nums: List[int], k: int) -> int:
