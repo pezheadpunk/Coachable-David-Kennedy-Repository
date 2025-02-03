@@ -25,4 +25,3 @@ class Solution:
             else:
                 result.append(char)
         return "".join(result)
-        
