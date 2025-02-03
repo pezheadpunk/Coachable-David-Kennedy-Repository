@@ -18,9 +18,12 @@ class LRUCache:
     def __init__(self, capacity: int):
         self.capacity = capacity
         self.cache = {}
-        self.lru = deque()    
-
+        self.lru = deque()
+        
     def get(self, key: int) -> int:
+        '''
+        If key is in cache returns the key's value if not returns -1.
+        '''
         if key in self.cache:
             self.lru.remove(key)
             self.lru.append(key)
@@ -28,9 +31,13 @@ class LRUCache:
         return -1
 
     def put(self, key: int, value: int) -> None:
+        '''
+        Adds a key and its value pair into the cache.
+        '''
         if self.get(key) == -1:
             if len(self.lru) + 1 > self.capacity:
                 del_key = self.lru.popleft()
                 del self.cache[del_key]
             self.lru.append(key)
         self.cache[key] = value
+        
