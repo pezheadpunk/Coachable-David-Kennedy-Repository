@@ -43,6 +43,4 @@ class Solution:
             if low_r >= k:
                 return select(l, low_r, k)
             return low_r + 1
-        
         return nums[select(0, len(nums) - 1, len(nums) - k)]
-        
