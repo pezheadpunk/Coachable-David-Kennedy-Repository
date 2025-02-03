@@ -19,3 +19,4 @@ class Solution:
             elif val not in {"", ".", ".."}:
                 stack.append(val)
         return "/" + "/".join(stack)
+        
