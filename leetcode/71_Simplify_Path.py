@@ -10,6 +10,8 @@ class Solution:
         if it's "..", it removes the last value in stack. Then returns the 
         stack as a string joined by "/" with a "/" added to the beginning
         of the string.
+        Runtime: O(n) -> iterating over the string
+        Space: O(n) -> the stack
         '''
         path = path.split("/")
         stack = []
