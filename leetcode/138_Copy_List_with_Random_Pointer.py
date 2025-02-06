@@ -34,4 +34,3 @@ class Solution:
             copy.random = list_dict[cur.random]
             cur = cur.next
         return list_dict[head]
-        
