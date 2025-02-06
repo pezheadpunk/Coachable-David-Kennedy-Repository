@@ -29,7 +29,7 @@ class Solution:
             if end_1 < start_2:
                 i += 1
                 continue
-            elif end_2 < start_1:
+            if end_2 < start_1:
                 j += 1
                 continue
             overlap = []
