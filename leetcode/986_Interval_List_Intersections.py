@@ -3,8 +3,8 @@ from typing import List
 
 class Solution:
     '''Solution Class'''
-    def intervalIntersection(self, firstList: List[List[int]], secondList: List[List[int]]) 
-        -> List[List[int]]:
+    def intervalIntersection(self, firstList: List[List[int]], secondList: \
+                             List[List[int]]) -> List[List[int]]:
         '''
         We create four varaibles to help keep track of the strarting and 
         end points of fistList and secondList. Then we use logic gates to 
