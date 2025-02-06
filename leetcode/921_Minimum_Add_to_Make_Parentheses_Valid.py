@@ -21,4 +21,3 @@ class Solution:
             else:
                 total += 1
         return total + stack
-          
