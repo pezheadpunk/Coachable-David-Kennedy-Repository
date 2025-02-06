@@ -28,8 +28,8 @@ class Solution:
             if row == n - 1 and col == n - 1:
                 return path_len
             for dr, dc in directions:
-                    nr, nc = row + dr, col + dc
-                    if 0 <= nr < n and 0 <= nc < n and grid[nr][nc] == 0 and (nr, nc) not in visited:
-                        q.append((nr, nc, path_len + 1))
-                        visited.add((nr, nc))
+                nr, nc = row + dr, col + dc
+                if 0 <= nr < n and 0 <= nc < n and grid[nr][nc] == 0 and (nr, nc) not in visited:
+                    q.append((nr, nc, path_len + 1))
+                    visited.add((nr, nc))
         return -1
