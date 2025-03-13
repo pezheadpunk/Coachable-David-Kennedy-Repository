@@ -75,6 +75,7 @@ Create a subclass Manager that overrides get_salary() to return 80,000.
 '''
 class Manager(Employee):
     def __init__(self):
+        super().__init__()
         # This override of the base_salary attribute will also override the call
         # in get_salary that is inherited from Employee class.
         self.base_salary = "80,000"
