@@ -65,7 +65,7 @@ def sum_diagonals(matrix):
 	'''
 	ret_sum = 0
 	for i in range(len(matrix)):
-		ret_sum += (matrix[i][i] + matrix[i][(i+1)*(-1)]
+		ret_sum += (matrix[i][i] + matrix[i][(i+1)*(-1)])
 	return ret_sum
 
 
