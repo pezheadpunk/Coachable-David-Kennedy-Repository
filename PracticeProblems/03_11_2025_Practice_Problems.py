@@ -1,9 +1,7 @@
 '''03/11/25'''
 
-'''
-Write a single line of Python code using a list comprehension to generate a
-list of squares of all even numbers from 0 to 10.
-'''
+# Write a single line of Python code using a list comprehension to generate a
+# list of squares of all even numbers from 0 to 10.
 squares = [x*x for x in range(11) if x % 2 == 0]
 
 '''
@@ -60,8 +58,9 @@ def sum_diagonals(matrix):
     Write a function sum_diagonals that takes a square matrix NxN and returns
     the sum of its main diagonal and anti-diagonal.
     '''
+    n = len(matrix)
     ret_sum = 0
-    for i in range(len(matrix)):
+    for i in range(n):
         ret_sum += (matrix[i][i] + matrix[i][(i+1)*-1])
     return ret_sum
 
