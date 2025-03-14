@@ -17,13 +17,16 @@ class Counter:
         And increment which increments the count by 1.
         '''
         self.count += 1
-    
+
     def reset_count(self):
         '''
         b. Implement a function that resets the counter to 0.
         '''
         self.count = 0
 
+class MaxThresholdError(Exception):
+    pass
+    
 class LimitCounter(Counter):
     '''
     c. Implement a class LimitCounter, which should inherit from Counter, with a new
@@ -38,8 +41,8 @@ class LimitCounter(Counter):
         '''
         If you try to increment past 100, there should raise an error.
         '''
-        if self.count + 1 > max_threshold:
-            raise Exception("Error: Incrementing will exeed max threshold")
+        if self.count + 1 > self.max_threshold:
+            raise MaxThresholdError("Incrementing will exeed max threshold")
         self.count += 1
 
 class BankAccount:
@@ -140,5 +143,5 @@ class RecurringTask(Task):
         iii. Overrides __str__() to indicate that the task is recurring.
         '''
         if not self.title or not isinstance(self.title, str):
-            raise NameError("Invalid Title") 
+            raise NameError("Invalid Title")
         return f"Task: {self.title} - is a recurring task"
