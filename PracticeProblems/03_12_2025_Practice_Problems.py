@@ -26,7 +26,7 @@ class Counter:
 
 class MaxThresholdError(Exception):
     pass
-    
+
 class LimitCounter(Counter):
     '''
     c. Implement a class LimitCounter, which should inherit from Counter, with a new
@@ -128,9 +128,6 @@ class RecurringTask(Task):
     b. For the RecurringTask Subclass:
     i. Inherits from Task.
     '''
-    def __init__(self, title):
-        super().__init__(title)
-
     def mark_completed(self):
         '''
         ii. Overrides mark_completed() so that when called, it resets completed back
