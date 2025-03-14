@@ -120,7 +120,7 @@ class Task:
         v. Raises an error if title is empty or not a string.
         '''
         if not self.title or not isinstance(self.title, str):
-            raise NameError("Invalid Title")
+            raise ValueError("Invalid Title")
         return f"Task: {self.title} - Completed: {self.completed}"
 
 class RecurringTask(Task):
@@ -143,5 +143,5 @@ class RecurringTask(Task):
         iii. Overrides __str__() to indicate that the task is recurring.
         '''
         if not self.title or not isinstance(self.title, str):
-            raise NameError("Invalid Title")
+            raise ValueError("Invalid Title")
         return f"Task: {self.title} - is a recurring task"
