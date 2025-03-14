@@ -7,7 +7,7 @@ class Counter:
         self.count = starting_value
 
     def get_cout(self):
-         '''
+        '''
         a. Implement functions get_count which returns the current count.
         '''
         return self.count
